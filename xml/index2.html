@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="sess">
+        <div>
+            <input type="text" id="xml" value="items/base/consumables/back/back_140_cape_item.xml">
+            <button id="read">Read</button>
+        </div>
+        <section>
+            <table>
+                <tbody>
+                    <tr>
+                        <th><img src="" id="iconImg"></th>
+                        <th>
+                            <b id="itemName"></b><br>
+                            <a id="itemDesc"></a>
+                        </th>
+                    </tr>
+                </tbody>
+            </table><hr>
+            <section>
+                <div>
+                    <button id="wear">Wear</button>
+                    <button id="floor">Floor</button>
+                </div>
+                <div>
+                    <div id="itemImg"></div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <script>
+        document.getElementById('read').addEventListener('click',function(){
+            let iconImg = document.getElementById('iconImg')
+            let itemName = document.getElementById('itemName')
+            let itemDesc = document.getElementById('itemDesc')
+            let itemImg = document.getElementById('itemImg')
+            let path = document.getElementById('xml').value
+            fetch(path).then((response)=>{
+                response.text().then((xml)=>{
+                    let name = xml.search('name')
+                    let desc = xml.search('desc')
+                    let tags = xml.search('tags')
+                    let icon = xml.search('icon')
+                    let price = xml.search('price')
+                    let source = xml.search('source')
+                    let cols = xml.search('cols')
+                    if(name>=26 || name<=24){
+                        let nameTx = xml.slice(name+6,desc-2)
+                        let descTx = xml.slice(desc+6,tags-2)
+                        let iconTx = xml.slice(icon+6,price-2)
+                        let sourceTx = xml.slice(source+8,cols-2)
+                        iconImg.src=iconTx
+                        itemName.innerHTML=nameTx
+                        itemDesc.innerHTML=descTx
+                        itemImg.style.backgroundImage="url("+sourceTx+")"
+                        document.getElementById('wear').addEventListener('click',function(){
+                            let path2 = path.slice(path,-9)
+                            let wearPath = path2+"_wear.xml"
+                            fetch(wearPath).then((response2)=>{
+                                response2.text().then((xml2)=>{
+                                    let Fr1 = xml2.search('Fr1')
+                                    let Fr2 = xml2.search('Fr2')
+                                    let Fr3 = xml2.search('Fr3')
+                                    let Sit = xml2.search('Sit')
+                                    let frames = [
+                                        frame1 = xml2.slice(Fr1+13,Fr2-43),
+                                        frame2 = xml2.slice(Fr2+13,Fr3-43),
+                                        frame3 = xml2.slice(Fr3+13,Sit-43),
+                                        frame4 = xml2.slice(Fr2+13,Fr3-43),
+                                    ]
+                                    for(let i=0;i<frames.length;i++){
+                                        setTimeout(()=>{
+                                            itemImg.style.backgroundImage="url("+frames[i]+")"
+                                        },800*i)
+                                    }
+                                })
+                            })
+                        })
+                        document.getElementById('floor').addEventListener('click',function(){
+                            itemImg.style.backgroundImage="url("+sourceTx+")"
+                        })
+                    }else{
+                        
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
+<style>
+    *{
+        margin: 0px;
+        font-family: arial;
+        color: rgb(209, 209, 209);
+        outline: none;
+    }
+    body{
+        background-color: rgb(41, 41, 41);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        background-color: rgb(24, 24, 24);
+        padding:6px;
+        width:80%;
+    }button{
+        background-color: rgb(24, 24, 24);
+        padding:6px;
+    }table{
+        text-align:left;
+    }th a{
+        font-size:15px;
+    }#itemImg{
+        width:400px;
+        height:400px;
+        background-color: rgb(22, 22, 22);
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow:0px 10px 20px 1px rgba(0,0,0,0.5);
+        border-radius:10px;
+    }
+</style>

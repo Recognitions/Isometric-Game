@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(56, 56, 56);
+    overflow: hidden;
+}
+.menus{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top:10%;
+    right: 0px;
+}.menus button{
+    background-color: transparent;
+    margin-top:20px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    color:transparent;
+    transition: 0.3s;
+    border: 0px;
+    font-size:18px;
+}.menus button:hover{
+    color:white;
+    text-shadow: 0px 0px 5px white;
+    margin-right:5px;
+}.menus button:focus{
+    opacity: 0.5;
+    margin-right:10px;
+    color:cyan;
+    text-shadow: 0px 0px 5px cyan;
+}
+.menu{
+    min-width:50px;
+    min-height: 60px;
+    margin-top:-25%;
+    background-size:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#menu1{background-image: url(https://media.discordapp.net/attachments/914616752443383851/930180418190344322/outline_person_white_24dp.png);}
+#menu2{background-image: url(https://media.discordapp.net/attachments/914616752443383851/930180417695412314/outline_backpack_white_24dp.png);}
+#menu3{background-image: url(https://media.discordapp.net/attachments/914616752443383851/930180417154342983/outline_shopping_cart_white_24dp.png);}
+#menu4{background-image: url(https://media.discordapp.net/attachments/914616752443383851/930180417380818974/outline_apartment_white_24dp.png);}
+#menu5{background-image: url(https://media.discordapp.net/attachments/914616752443383851/930180417955446834/outline_handshake_white_24dp.png);}
+#menu6{background-image: url(https://media.discordapp.net/attachments/914616752443383851/930180416923635782/outline_settings_white_24dp.png);}
+*{
+    margin: 0px;
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+    
+.amigos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width:100%;
+    bottom:30px;
+    background-color: black;
+}.amigos a{
+    padding:5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width:50px;
+    height:50px;
+    text-align: center;
+    color:transparent;
+    transition: 0.3s;
+    background-image:url(https://media.discordapp.net/attachments/916545651674873926/930165905818808361/icone_barra_de_amigos_com_brilho.png?width=554&height=554);
+    background-size:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}.amigos a:hover{
+    color:white;
+    margin-top:-5px;
+    background-image:url(https://media.discordapp.net/attachments/916545651674873926/930165906129158184/icone_barra_de_amigos_sem_brilho.png?width=554&height=554);
+}
+.image{
+    width:100px;
+    height: 100px;
+    margin-top:-90%;
+    margin-left:-50%;
+    background-size:100%;
+    background-position: center;
+}

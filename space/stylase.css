@@ -1,0 +1,159 @@
+::-webkit-scrollbar{width: 1px; height:1px;}
+::-webkit-scrollbar-track {background: #525252;}
+::-webkit-scrollbar-thumb {background: #242424;}
+::-webkit-scrollbar-thumb:hover {background: #000000;}
+:root{
+    --button1-color: rgba(0, 34, 107, 0.5);
+    --button1-border: 2px solid rgba(0, 24, 77, 0.267);
+    --button1-hover: rgba(0,0,0,0.5);
+    --dadosjogador: rgb(0, 255, 170);
+    --dadosconta: rgb(0, 132, 255);
+}
+*{
+    margin:0px;
+    outline: none;
+    font-family: arial;
+    user-select: none;
+    outline-style: none;
+    background-repeat: no-repeat;
+}
+body{
+    background: radial-gradient(white,rgb(0, 102, 102));
+    overflow: hidden;
+}
+#config{
+    position: absolute;
+    left:5px;
+    top:5px;
+    width:auto;
+    height:30px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}#config label{
+    margin-top:7px;
+    margin-left:5px;
+    margin-right:5px;
+    color:white;
+}
+#votar{
+    background-color: var(--button1-color);
+    border-radius:30px;
+    border: var(--button1-border);
+    margin-top:3px;
+    height:20px;
+}
+#votar button{
+    height:20px;
+    width:20px;
+    background-color: transparent;
+    border:0px;
+    background-image: url(https://media.discordapp.net/attachments/914616752443383851/930911761715052605/white-star-hi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:80%;
+    transition: 0.2s;
+}#votar button:first-child{
+    margin-left:8px;
+}#votar button:last-child{
+    margin-right:8px;
+}#votar button:hover{opacity:0.5;}
+#stg{
+    margin-top:2.5px;
+    margin-right:5px;
+    height:25px;
+    width:25px;
+    border-radius:100%;
+    background-color: var(--button1-color);
+    background-image: url(https://media.discordapp.net/attachments/914616752443383851/930908687827083364/white-gear.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:80%;
+    border: var(--button1-border);
+    transition: 0.2s;
+}#stg:hover{background-color: var(--button1-hover);}
+
+#chat{
+    position: absolute;
+    height:600px;
+    width:250px;
+    bottom:0px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#chat label{
+    color:white;
+    position: absolute;
+    top:5px;
+    font-size:15px;
+}
+#chat form{
+    position: absolute;
+    bottom:7px;
+}#chat form input{
+    padding:5px;
+    bottom:7px;
+    width:210px;
+}
+
+#chatText{
+    width:100%;
+    height:500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+}#chatText b{
+    font-size:15px;
+    padding:3px;
+    color:whitesmoke;
+    border-radius:20px;
+    margin-top:2px;
+    margin-left:10px;
+}
+
+
+#sombra{
+    z-index: -2;
+    position: absolute;
+    bottom:0px;
+    height:100px;
+    width:100%;
+    background: linear-gradient(transparent,black);
+}
+
+
+#dinheiros{
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:250px;
+    height:100px;
+    background-color: rgba(0,0,0,0.7);
+    color:white;
+    display: flex;
+    justify-content: center;
+}#dinheiros div{
+    z-index: -1;
+    position: absolute;
+    height:40px;
+    width:100%;
+    background-color: rgba(0,0,0,0);
+}#dinheiros i{
+    margin-top:15px;
+}#dinheiros label{
+    font-size: 15px;
+    margin-left:5px;
+    margin-top:16px;
+}
+.moeda{ width:20px; height:20px; background-position: center; background-size:100%;}
+#karmas{background-image:url(https://media.discordapp.net/attachments/914616752443383851/934571789143650324/gold.png);margin-left:20px;}
+#sinais{background-image:url(https://media.discordapp.net/attachments/914616752443383851/930174310893645944/1383_pt_BRicons_properties__embed_properties_______assets_icons_currency_tokens24_png_1504175462.png);}
+#vip{color:cyan; background-image:url();margin-left:10px;}
+
+
+
+.sucesso{color:rgb(0, 180, 0)};

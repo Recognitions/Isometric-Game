@@ -1,0 +1,102 @@
+*{
+    font-family: arial;
+    user-select: none;
+    outline: none;
+}#msg{
+    position: relative;
+    margin-top:-20px;
+    margin-bottom:5px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/background.jpg);
+    background-size:100%;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+.content{
+    height:210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}.content input{
+    font-size:18px;
+    border:0px;
+    border-radius:8px;
+    width:300px;
+    height:25px;
+    color: rgb(80, 80, 80);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.432);
+    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+}
+.bottomBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin:5px;
+    margin-top:-4px;
+}.bottomBar button:last-child{margin-left:10px;}
+hr{
+    border: 0px solid white;
+    border-top: 1px solid #017793;
+    border-bottom: 1px solid #53cde9;
+    margin:5px;
+    margin-left:10px;
+    margin-right:10px;
+}
+.topBar{
+    height:30px;
+    display: flex;
+    justify-content: space-between;
+}.menuName{
+    margin:10px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom:35%;
+    width:500px;
+    height:300px;
+    color: white;
+    border-radius:10px;
+    border: 1px solid #3ba8c3;
+    border-top: 1px solid #8cd8ea;
+    border-bottom: 2px solid #00667f;
+    background: linear-gradient(#19b1d6,#0098bd)
+}.close{
+    width:25px;
+    height:25px;
+    border-radius:100%;
+    color: white;
+    background-color: #1491af;
+    border:0px;
+    margin:5px;
+}
+.botao{
+    display: flex;
+    justify-content: center;
+    padding-right:15px;
+    padding-left:15px;
+    color: white;
+    border-radius:5px;
+    font-size:20px;
+    border: 0px solid black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.65);
+    transition: 0.2s;
+}.botao:hover{
+    opacity: 0.8;
+}
+.orange{
+    background: linear-gradient(#ffbb54 40%,#ff9900 50%,#ffd290);
+}.blue{
+    background: linear-gradient(#6ac1d6 40%,#21a3c2 50%,#21a3c2,#9ed7e4);
+}
