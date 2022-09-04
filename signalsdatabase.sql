@@ -78,9 +78,9 @@ CREATE TABLE `spaces_data` (
 INSERT INTO `spaces_data` (`space_id`, `owner_id`, `link`, `name`, `description`, `image`, `space_size`, `tiles`) VALUES
 (1, 22, 'ola', 'Casinha', '', 'https://th.bing.com/th/id/R.1740fc7285fca45fbcb10fd8f4b7278f?rik=Xejc8Tve6be3eA&pid=ImgRaw&r=0', '4', ''),
 (2, 22, 'rapaz', 'Coito 2dddddddddddddddddd', '', 'https://external-preview.redd.it/Y9EUK5N5cqr8hQJ7DQ195xZbC2vHwaIgVhzJehHd2w8.jpg?auto=webp&s=62e2325745059236ef5eaff5f7793eb5e83d5534', '0', ''),
-(3, 23, 'Gelff', 'Space from Gelff', 'This is my inicial space', '/content/media/spaces/default.jpg', '0', ''),
-(4, 24, 'bola', 'Space from bola', 'This is my inicial space', '/content/media/spaces/default.jpg', '10', '0'),
-(5, 25, 'mikasa', 'Space from Mikasa', 'This is my inicial space', '/content/media/spaces/default.jpg', '5', 'colors[0],colors[1]');
+(3, 23, 'Gelff', 'Space from Gelff', 'This is my inicial space', '../content/media/spaces/default.jpg', '0', ''),
+(4, 24, 'bola', 'Space from bola', 'This is my inicial space', '../content/media/spaces/default.jpg', '10', '0'),
+(5, 25, 'mikasa', 'Space from Mikasa', 'This is my inicial space', '../content/media/spaces/default.jpg', '5', 'colors[0],colors[1]');
 
 -- --------------------------------------------------------
 
@@ -99,13 +99,13 @@ CREATE TABLE `spaces_textures` (
 --
 
 INSERT INTO `spaces_textures` (`texture_id`, `type`, `url`) VALUES
-(1, 1, '/content/spaces/base/floor/grass.jpg'),
-(2, 1, '/content/spaces/base/floor/grass2.jpg'),
-(3, 1, '/content/spaces/base/floor/grass3.jpg'),
-(4, 1, '/content/spaces/base/floor/water.png'),
-(5, 1, '/content/spaces/base/floor/wood1.jfif'),
-(6, 1, '/content/spaces/base/floor/sand1.jfif'),
-(7, 1, '/content/spaces/base/floor/rock2.jpg');
+(1, 1, '../content/spaces/base/floor/grass.jpg'),
+(2, 1, '../content/spaces/base/floor/grass2.jpg'),
+(3, 1, '../content/spaces/base/floor/grass3.jpg'),
+(4, 1, '../content/spaces/base/floor/water.png'),
+(5, 1, '../content/spaces/base/floor/wood1.jfif'),
+(6, 1, '../content/spaces/base/floor/sand1.jfif'),
+(7, 1, '../content/spaces/base/floor/rock2.jpg');
 
 -- --------------------------------------------------------
 
