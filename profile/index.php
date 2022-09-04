@@ -27,12 +27,12 @@
 <body>
     <header>
         <div class="pages">
-            <a href="/profile/"><button class="btn">Home</button></a>
-            <a href="/market/"><button class="btn">Mercado</button></a>
-            <a href="/community/"><button class="btn">Comunidade</button></a>
-            <a href="/shop/"><button class="btn">Loja</button></a>
-            <a href="/redeem/"><button class="btn">Resgatar</button></a>
-            <a href="/help/"><button class="btn">Ajuda</button></a>
+            <a href="./profile/"><button class="btn">Home</button></a>
+            <a href="./market/"><button class="btn">Mercado</button></a>
+            <a href="./community/"><button class="btn">Comunidade</button></a>
+            <a href="./shop/"><button class="btn">Loja</button></a>
+            <a href="./redeem/"><button class="btn">Resgatar</button></a>
+            <a href="./help/"><button class="btn">Ajuda</button></a>
         </div>
         <div class="second_area">
             <div class="credits">
@@ -79,7 +79,7 @@
             <h1>Seus Espaços</h1><hr>
             <div class="spaces">
                 <?php while($space = mysqli_fetch_assoc($spaces_data)){?>
-                    <a href="/space/<?php echo $space['link']; ?>"><button style="background-image: url(<?php echo $space['image']; ?>);"><?php echo substr($space['name'],0,16); ?></button></a>
+                    <a href="../space/<?php echo $space['link']; ?>"><button style="background-image: url(<?php echo $space['image']; ?>);"><?php echo substr($space['name'],0,16); ?></button></a>
                 <?php }?>
             </div>
         </div>

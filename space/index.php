@@ -23,12 +23,12 @@
     </section>
     
     <div id="objs" style="position:absolute;bottom:50px;left:0px; display:flex;">
-        <div style="background-image:url(/content/spaces/base/object/ftu_roses.png);" id="objs0"></div>
-        <div style="background-image:url(/content/spaces/base/object/ftu_daisies.png);" id="objs1"></div>
-        <div style="background-image:url(/content/spaces/base/object/ftu_trashbin.png);" id="objs2"></div>
-        <div style="background-image:url(/content/spaces/base/object/star.png);" id="objs3"></div>
-        <div style="background-image:url(/content/spaces/base/object/amogu.gif);" id="objs4"></div>
-        <div style="background-image:url(/content/spaces/base/object/amogu2.gif);" id="objs5"></div>
+        <div style="background-image:url(../content/spaces/base/object/ftu_roses.png);" id="objs0"></div>
+        <div style="background-image:url(../content/spaces/base/object/ftu_daisies.png);" id="objs1"></div>
+        <div style="background-image:url(../content/spaces/base/object/ftu_trashbin.png);" id="objs2"></div>
+        <div style="background-image:url(../content/spaces/base/object/star.png);" id="objs3"></div>
+        <div style="background-image:url(../content/spaces/base/object/amogu.gif);" id="objs4"></div>
+        <div style="background-image:url(../content/spaces/base/object/amogu2.gif);" id="objs5"></div>
 
     </div>
     <div id="colors" style="position:absolute;bottom:0px;left:0px; display:flex;">
@@ -151,6 +151,6 @@
 
     
     <div id="sombra"></div>
-    <script>history.pushState({},"/space/index.php//?id=<?php echo $url; ?>","/space/<?php echo $url ?>")</script>
+    <script>history.pushState({},"/space/index.php//?id=<?php echo $url; ?>","../space/<?php echo $url ?>")</script>
 </body>
 </html>

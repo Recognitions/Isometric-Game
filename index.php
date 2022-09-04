@@ -6,8 +6,8 @@
 </form>
 <?php 
     session_start();
-    include('content/host/database.php');
-    if(isset($_POST['submit'])){include('content/scripts/login.php');}
+    include('./content/host/database.php');
+    if(isset($_POST['submit'])){include('./content/scripts/login.php');}
 ?>
 -->
 

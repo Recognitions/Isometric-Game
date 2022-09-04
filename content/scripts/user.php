@@ -1,6 +1,6 @@
 <?php 
     $login = $_SESSION['login'];
-    if($login){}else{header('Location: /');}
+    if($login){}else{header('Location: ../');}
 
     $user_data = mysqli_query($con, "SELECT * FROM users_data WHERE email='$login'");
     $user = mysqli_fetch_assoc($user_data);

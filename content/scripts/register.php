@@ -23,7 +23,7 @@
 
 
         $email = $_SESSION['email'];
-        header('Location: /profile');
+        header('Location: ../../profile');
     }else{
         echo 'error';
     }

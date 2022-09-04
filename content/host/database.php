@@ -1,4 +1,4 @@
 <?php
-    $con = new mysqli('localhost', 'root', 'Ékstasisêxtaseçançan195200', 'signalsdatabase');
+    $con = new mysqli('localhost', 'root', '', 'signalsdatabase');
     
 ?>
